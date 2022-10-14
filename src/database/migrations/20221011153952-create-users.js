@@ -13,19 +13,19 @@ module.exports = {
      allowNull:false,
      },
      name: {
-      type:Sequelize.INTEGER ,
+      type:Sequelize.STRING ,
       allowNull:false,
      },
      email: {
       type:Sequelize.STRING ,
       allowNull:false,
      },
-     createdA_at: {
+     created_at: {
      type:Sequelize.DATE,
      allowNull:false,
      
      },
-     update_at: {
+     updated_at: {
       type:Sequelize.DATE,
       allowNull:false,
       

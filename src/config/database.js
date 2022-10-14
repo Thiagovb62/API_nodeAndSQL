@@ -5,7 +5,7 @@ module.exports = {
     password:'12345678',
     database:'projetoNode',
     define:{
-        timestamp:true,
+        timestamps:true,
         underscored:true,
     },
 }
