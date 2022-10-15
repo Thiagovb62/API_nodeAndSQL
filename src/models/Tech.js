@@ -4,7 +4,8 @@ class Tech extends Model {
       super.init({
         name: DataTypes.STRING,
       }, {
-        sequelize
+        sequelize,
+        tableName:'techs',
       })
     }
     static associate(models){
@@ -13,4 +14,4 @@ class Tech extends Model {
 }
 
 
-module.exports = User;
+module.exports = Tech;
