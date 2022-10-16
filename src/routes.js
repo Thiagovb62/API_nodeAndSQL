@@ -9,15 +9,18 @@ const routes = express.Router();
 
 routes.get('/users', UserController.show);
 routes.post('/users', UserController.store)
+routes.put('/users/:user_id', UserController.Update)
 routes.delete('/users/:user_id', UserController.delete)
 
 
 routes.get('/users/:user_id/addresses', AdressController.show)
 routes.post('/users/:user_id/addresses', AdressController.store)
+routes.put('/users/:user_id/addresses', AdressController.Update)
 routes.delete('/users/:user_id/addresses', AdressController.delete)
 
 routes.get('/users/:user_id/techs', TechsController.show)
 routes.post('/users/:user_id/techs', TechsController.store)
+routes.put('/users/:user_id/techs', TechsController.Update)
 routes.delete('/users/:user_id/techs', TechsController.delete)
 
 

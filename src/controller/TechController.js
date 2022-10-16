@@ -61,6 +61,24 @@ module.exports = {
 
         return res.status(200).json({ success: 'tecnologia deletada com sucesso' })
 
+    },
+    async Update(req, res) {
+        const { user_id } = req.params;
+        const { name } = req.body;
+
+        const user = await User.findByPk(user_id);
+
+        if (!user) {
+            return res.status(400).json({ error: 'User not found' });
+        }
+        await Tech.update(name, {
+            where: {
+                id: user_id
+            }
+        });
+
+        return res.status(200).json({ success: "atualizado com sucesso" });
+
     }
 
 }
